@@ -1,4 +1,6 @@
-Updates
+=================================================
+Build 0003 Updates
+=================================================
 - Added a tile highlighting system
 - Tiles under combatants are distinct from empty tiles.
 - Tile under the current turn owner is pale green
