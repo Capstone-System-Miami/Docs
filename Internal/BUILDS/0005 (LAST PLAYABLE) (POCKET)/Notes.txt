@@ -24,7 +24,7 @@ Build 0005 Updates
 - Added a VERY rudimentary main menu.
 	- Play: Takes the user to a character class selector.
 	- Settings: Takes you to a fake settings menu with no functionality.
-	- Quit: Quits the application.
+	- Quit: Should Quit the application. (DOES NOT work in this build)
 
 - Class Selector
 	- Select a class which determines all of the player character's Attributes, and therefore their Stats.
