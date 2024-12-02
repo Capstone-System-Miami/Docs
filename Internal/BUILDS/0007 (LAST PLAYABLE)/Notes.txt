@@ -1,0 +1,38 @@
+=================================================
+Build 0003 Updates
+=================================================
+- Added a tile highlighting system
+- Tiles under combatants are distinct from empty tiles.
+- Tile under the current turn owner is pale green
+- When the player mouses over a tile
+	- Movement Phase
+		- White if unblocked
+		- Brown if occupied
+		- No highlight if moving
+	- Action Phase
+		- White if unblocked
+		- Brown if occupied.
+		- Any of these highlights are overridden by the Targeting system for any EQUIPPED Ability.
+		- No highlight if an ability is currently being used.
+		- If an ability has already been used, the player will still rotate to face the tile under the mouse, but no tile will be highlighted unless it is occupied, in which case it will highlight brown in the same manner as above.
+- Player rotates to face the tile under the mouse unless they are using an ability and have the targets locked, waiting for confirmation.
+
+
+=================================================
+Build 0005 Updates
+=================================================
+- Added a VERY rudimentary main menu.
+	- Play: Takes the user to a character class selector.
+	- Settings: Takes you to a fake settings menu with no functionality.
+	- Quit: Should Quit the application. (DOES NOT work in this build)
+
+- Class Selector
+	- Select a class which determines all of the player character's Attributes, and therefore their Stats.
+	- This Selection functionally carries over to the Neighborhood and into Combat.
+	- Restart the application to select a different class and observe the differences.
+		- Not currently an interface for viewing these attributes or stats.
+		- This is planned for the next build.
+
+=================================================
+Build 0007 Updates
+=================================================
