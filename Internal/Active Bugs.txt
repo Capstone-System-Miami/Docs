@@ -1,0 +1,5 @@
+Updated 01/06/25
+
+BUG: clicking off board
+	- Can target off-board tiles
+	- Can execute Ability on these targets.
