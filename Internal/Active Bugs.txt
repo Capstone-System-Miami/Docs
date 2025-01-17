@@ -1,5 +1,25 @@
-Updated 01/06/25
+Updated 01/16/25
 
-BUG: clicking off board
-	- Can target off-board tiles
+1. BUG: clicking off board
+Problem:
+	- Can target off-board tiles.
 	- Can execute Ability on these targets.
+Cause:
+	- ?
+Solution:
+	- Need more info
+
+2. BUG: 2 active listeners
+Problem:
+	- ClassSelector scene
+	- "There are 2 active listeners in the scene"
+Cause:
+	- GameObject called "Main Camera" in the root of the scene
+	- GameObject called "Main Camera" (child of the player)
+	- Both camera GOs have AudioListener components.
+Solution:
+	- Not a great way around needing two cameras, since we require:
+		- A camera when the scene starts
+		- The Player to be instantiated so they can have the class selection apply to them.
+	- Take the AudioListener off of the camera in the root of the scene.
+	- Can we eventually take AudioListener off of any Cameras? I'm not sure why we would need to have the Audio be centered around any camera.
