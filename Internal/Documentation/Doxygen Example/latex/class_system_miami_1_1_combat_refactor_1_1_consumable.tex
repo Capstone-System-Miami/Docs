@@ -1,0 +1,73 @@
+\doxysection{System\+Miami.\+Combat\+Refactor.\+Consumable Class Reference}
+\hypertarget{class_system_miami_1_1_combat_refactor_1_1_consumable}{}\label{class_system_miami_1_1_combat_refactor_1_1_consumable}\index{SystemMiami.CombatRefactor.Consumable@{SystemMiami.CombatRefactor.Consumable}}
+Inheritance diagram for System\+Miami.\+Combat\+Refactor.\+Consumable\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_system_miami_1_1_combat_refactor_1_1_consumable}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_system_miami_1_1_combat_refactor_1_1_consumable_a8dc1096abab0837c9b63d6f1257a65b9}\label{class_system_miami_1_1_combat_refactor_1_1_consumable_a8dc1096abab0837c9b63d6f1257a65b9} 
+{\bfseries Consumable} (\mbox{\hyperlink{class_system_miami_1_1_combat_refactor_1_1_consumable_s_o}{Consumable\+SO}} preset, \mbox{\hyperlink{class_system_miami_1_1_combat_system_1_1_combatant}{Combatant}} user)
+\item 
+\Hypertarget{class_system_miami_1_1_combat_refactor_1_1_consumable_ac6518f83ef8d532947285eba14ee5d06}\label{class_system_miami_1_1_combat_refactor_1_1_consumable_ac6518f83ef8d532947285eba14ee5d06} 
+override IEnumerator {\bfseries Execute} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_system_miami_1_1_combat_refactor_1_1_combat_action}{System\+Miami.\+Combat\+Refactor.\+Combat\+Action}}}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries Update\+Direction} (Direction\+Context new\+Direction, bool direction\+Changed)
+\item 
+void {\bfseries Unequip} ()
+\item 
+bool {\bfseries Player\+Found\+In\+Targets} ()
+\begin{DoxyCompactList}\small\item\em TODO\+: Implement this method. \end{DoxyCompactList}\item 
+IEnumerator {\bfseries Execute} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_system_miami_1_1_combat_refactor_1_1_consumable_ab538b58e20a8be68606bdcf023d8b7be}\label{class_system_miami_1_1_combat_refactor_1_1_consumable_ab538b58e20a8be68606bdcf023d8b7be} 
+readonly int {\bfseries Max\+Uses}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_system_miami_1_1_combat_refactor_1_1_combat_action}{System\+Miami.\+Combat\+Refactor.\+Combat\+Action}}}
+\begin{DoxyCompactItemize}
+\item 
+readonly Sprite {\bfseries Icon}
+\item 
+readonly List$<$ \mbox{\hyperlink{class_system_miami_1_1_combat_system_1_1_combat_subaction}{Combat\+Subaction}} $>$ {\bfseries Sub\+Actions}
+\item 
+readonly Animator\+Override\+Controller {\bfseries Override\+Controller}
+\item 
+readonly \mbox{\hyperlink{class_system_miami_1_1_combat_system_1_1_combatant}{Combatant}} {\bfseries User}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_system_miami_1_1_combat_refactor_1_1_consumable_a0a3f37577a228612f0b5c63d30eedaca}\label{class_system_miami_1_1_combat_refactor_1_1_consumable_a0a3f37577a228612f0b5c63d30eedaca} 
+int {\bfseries Uses\+Remaining}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\Hypertarget{class_system_miami_1_1_combat_refactor_1_1_consumable_a118bcdda8268f4c99668c7fad4b7d1b1}\label{class_system_miami_1_1_combat_refactor_1_1_consumable_a118bcdda8268f4c99668c7fad4b7d1b1} 
+bool {\bfseries Is\+Empty}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Events}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_system_miami_1_1_combat_refactor_1_1_consumable_a0ac446caf45951e076f90e3cb4e96a0b}\label{class_system_miami_1_1_combat_refactor_1_1_consumable_a0ac446caf45951e076f90e3cb4e96a0b} 
+Action$<$ \mbox{\hyperlink{class_system_miami_1_1_combat_refactor_1_1_consumable}{Consumable}} $>$ {\bfseries Consumed} = delegate\{ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_system_miami_1_1_combat_refactor_1_1_combat_action}{System\+Miami.\+Combat\+Refactor.\+Combat\+Action}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Combat\+Action} (Sprite icon, List$<$ \mbox{\hyperlink{class_system_miami_1_1_combat_system_1_1_combat_subaction}{Combat\+Subaction}} $>$ sub\+Actions, Animator\+Override\+Controller override\+Controller, \mbox{\hyperlink{class_system_miami_1_1_combat_system_1_1_combatant}{Combatant}} user)
+\item 
+void {\bfseries perform\+Actions} ()
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Combat Action/\+Consumable/Consumable.\+cs\end{DoxyCompactItemize}

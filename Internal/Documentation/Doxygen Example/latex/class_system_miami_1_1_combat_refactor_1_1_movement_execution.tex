@@ -1,0 +1,145 @@
+\doxysection{System\+Miami.\+Combat\+Refactor.\+Movement\+Execution Class Reference}
+\hypertarget{class_system_miami_1_1_combat_refactor_1_1_movement_execution}{}\label{class_system_miami_1_1_combat_refactor_1_1_movement_execution}\index{SystemMiami.CombatRefactor.MovementExecution@{SystemMiami.CombatRefactor.MovementExecution}}
+Inheritance diagram for System\+Miami.\+Combat\+Refactor.\+Movement\+Execution\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_system_miami_1_1_combat_refactor_1_1_movement_execution}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_system_miami_1_1_combat_refactor_1_1_movement_execution_aef7f74987917392102e7f62b87cede88}\label{class_system_miami_1_1_combat_refactor_1_1_movement_execution_aef7f74987917392102e7f62b87cede88} 
+{\bfseries Movement\+Execution} (\mbox{\hyperlink{class_system_miami_1_1_combat_system_1_1_combatant}{Combatant}} combatant, Movement\+Path movement\+Path)
+\item 
+override void \mbox{\hyperlink{class_system_miami_1_1_combat_refactor_1_1_movement_execution_a3da779fc93dae398f5e04993f5556ef2}{On\+Enter}} ()
+\begin{DoxyCompactList}\small\item\em To be called ONCE, as soon as the state becomes active. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_system_miami_1_1_combat_refactor_1_1_movement_execution_af7ca18d09ce329ad69f7cfc3f14baef7}{Update}} ()
+\begin{DoxyCompactList}\small\item\em To be called EVERY FRAME while the state is active Anything that needs to be checked or adjusted That doesn\textquotesingle{}t have to do with transitioning to the next state should be implemented here. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_system_miami_1_1_combat_refactor_1_1_movement_execution_a51afe6fa755c5068f8b851a6ffb57efd}{Make\+Decision}} ()
+\begin{DoxyCompactList}\small\item\em To be called EVERY FRAME after \doxylink{class_system_miami_1_1_combat_refactor_1_1_movement_execution_af7ca18d09ce329ad69f7cfc3f14baef7}{Update()}. This is where decisions should be made about whether to remain in this state, or transition into a new state (and if so, which new state? etc.) \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_system_miami_1_1_combat_refactor_1_1_movement_execution_a7b8259dbcf382ad6b7516fc5eb152e5e}{On\+Exit}} ()
+\begin{DoxyCompactList}\small\item\em Called once, inside Transition\+To(new\+State), just before the state becomes inactive. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_system_miami_1_1_combat_refactor_1_1_combatant_state}{System\+Miami.\+Combat\+Refactor.\+Combatant\+State}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void {\bfseries Late\+Update} ()
+\item 
+void \mbox{\hyperlink{class_system_miami_1_1_combat_refactor_1_1_combatant_state_ab81886bd4da9bb19059cd2c7f785e18e}{Switch\+State}} (\mbox{\hyperlink{class_system_miami_1_1_combat_refactor_1_1_combatant_state}{Combatant\+State}} new\+State)
+\begin{DoxyCompactList}\small\item\em The main method by which state transitions happen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_system_miami_1_1_combat_refactor_1_1_combatant_state_ac86e443afb73fda3990b2143198149c6}{Switch\+State}} (\mbox{\hyperlink{class_system_miami_1_1_combat_refactor_1_1_combatant_state}{Combatant\+State}} new\+State, float delay)
+\begin{DoxyCompactList}\small\item\em An overload of Switch\+State that takes a float. This function will run a Coroutine that then waits {\ttfamily float delay} seconds before assigning a new state and calling \doxylink{class_system_miami_1_1_combat_refactor_1_1_combatant_state_ac2b41342b17b6fc8c699c42868e88551}{On\+Enter()} on it. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_system_miami_1_1_combat_refactor_1_1_movement_execution_a4f60611651a0757a1885b6da0dd93948}\label{class_system_miami_1_1_combat_refactor_1_1_movement_execution_a4f60611651a0757a1885b6da0dd93948} 
+Conditions {\bfseries move\+Again\+Conditions} = new()
+\item 
+\Hypertarget{class_system_miami_1_1_combat_refactor_1_1_movement_execution_afa265a1ce910b95633d65ef676b4f45d}\label{class_system_miami_1_1_combat_refactor_1_1_movement_execution_afa265a1ce910b95633d65ef676b4f45d} 
+Conditions {\bfseries action\+Selection\+Conditions} = new()
+\item 
+\Hypertarget{class_system_miami_1_1_combat_refactor_1_1_movement_execution_a10f71d2121e27a2f4ee23da1bcfcecd1}\label{class_system_miami_1_1_combat_refactor_1_1_movement_execution_a10f71d2121e27a2f4ee23da1bcfcecd1} 
+Movement\+Path {\bfseries path}
+\item 
+\Hypertarget{class_system_miami_1_1_combat_refactor_1_1_movement_execution_a17f3a39e95f241c6b2750c38e9970203}\label{class_system_miami_1_1_combat_refactor_1_1_movement_execution_a17f3a39e95f241c6b2750c38e9970203} 
+List$<$ Overlay\+Tile $>$ {\bfseries path\+To\+Consume} = new()
+\item 
+\Hypertarget{class_system_miami_1_1_combat_refactor_1_1_movement_execution_a57b4ea3276be2f635db84fdde285956a}\label{class_system_miami_1_1_combat_refactor_1_1_movement_execution_a57b4ea3276be2f635db84fdde285956a} 
+Overlay\+Tile {\bfseries occupied\+Tile}
+\item 
+\Hypertarget{class_system_miami_1_1_combat_refactor_1_1_movement_execution_adcd1c1736aaf2da8d14e04d526bee24c}\label{class_system_miami_1_1_combat_refactor_1_1_movement_execution_adcd1c1736aaf2da8d14e04d526bee24c} 
+Overlay\+Tile {\bfseries focus\+Tile}
+\item 
+\Hypertarget{class_system_miami_1_1_combat_refactor_1_1_movement_execution_a3bd886dbf627589ce1eddb3fd45e54cd}\label{class_system_miami_1_1_combat_refactor_1_1_movement_execution_a3bd886dbf627589ce1eddb3fd45e54cd} 
+Overlay\+Tile {\bfseries destination\+Tile}
+\item 
+\Hypertarget{class_system_miami_1_1_combat_refactor_1_1_movement_execution_a964be33008ba253ccda641bc1a386d14}\label{class_system_miami_1_1_combat_refactor_1_1_movement_execution_a964be33008ba253ccda641bc1a386d14} 
+float {\bfseries distance\+To\+Target}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_system_miami_1_1_combat_refactor_1_1_combatant_state}{System\+Miami.\+Combat\+Refactor.\+Combatant\+State}}}
+\begin{DoxyCompactItemize}
+\item 
+readonly \mbox{\hyperlink{class_system_miami_1_1_combat_refactor_1_1_combatant_state_factory}{Combatant\+State\+Factory}} {\bfseries factory}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_system_miami_1_1_combat_refactor_1_1_combatant_state}{System\+Miami.\+Combat\+Refactor.\+Combatant\+State}}}
+\begin{DoxyCompactItemize}
+\item 
+readonly \mbox{\hyperlink{namespace_system_miami_aab69d65d1a9e5125d88dcfaa3fe98801}{Phase}} {\bfseries phase}
+\item 
+readonly \mbox{\hyperlink{class_system_miami_1_1_combat_system_1_1_combatant}{Combatant}} {\bfseries combatant}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_system_miami_1_1_combat_refactor_1_1_combatant_state}{System\+Miami.\+Combat\+Refactor.\+Combatant\+State}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Combatant\+State} (\mbox{\hyperlink{class_system_miami_1_1_combat_system_1_1_combatant}{Combatant}} combatant, \mbox{\hyperlink{namespace_system_miami_aab69d65d1a9e5125d88dcfaa3fe98801}{Phase}} phase)
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{class_system_miami_1_1_combat_refactor_1_1_combatant_state}{System\+Miami.\+Combat\+Refactor.\+Combatant\+State}}}
+\begin{DoxyCompactItemize}
+\item 
+string {\bfseries UI\+\_\+\+Prompts}\hspace{0.3cm}{\ttfamily  \mbox{[}get, protected set\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_system_miami_1_1_combat_refactor_1_1_movement_execution_a51afe6fa755c5068f8b851a6ffb57efd}\index{SystemMiami.CombatRefactor.MovementExecution@{SystemMiami.CombatRefactor.MovementExecution}!MakeDecision@{MakeDecision}}
+\index{MakeDecision@{MakeDecision}!SystemMiami.CombatRefactor.MovementExecution@{SystemMiami.CombatRefactor.MovementExecution}}
+\doxysubsubsection{\texorpdfstring{MakeDecision()}{MakeDecision()}}
+{\footnotesize\ttfamily \label{class_system_miami_1_1_combat_refactor_1_1_movement_execution_a51afe6fa755c5068f8b851a6ffb57efd} 
+override void System\+Miami.\+Combat\+Refactor.\+Movement\+Execution.\+Make\+Decision (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+To be called EVERY FRAME after \doxylink{class_system_miami_1_1_combat_refactor_1_1_movement_execution_af7ca18d09ce329ad69f7cfc3f14baef7}{Update()}. This is where decisions should be made about whether to remain in this state, or transition into a new state (and if so, which new state? etc.) 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_system_miami_1_1_combat_refactor_1_1_combatant_state_a83fa6dedff861eb627a8af25a242c7ea}{System\+Miami.\+Combat\+Refactor.\+Combatant\+State}}.
+
+\Hypertarget{class_system_miami_1_1_combat_refactor_1_1_movement_execution_a3da779fc93dae398f5e04993f5556ef2}\index{SystemMiami.CombatRefactor.MovementExecution@{SystemMiami.CombatRefactor.MovementExecution}!OnEnter@{OnEnter}}
+\index{OnEnter@{OnEnter}!SystemMiami.CombatRefactor.MovementExecution@{SystemMiami.CombatRefactor.MovementExecution}}
+\doxysubsubsection{\texorpdfstring{OnEnter()}{OnEnter()}}
+{\footnotesize\ttfamily \label{class_system_miami_1_1_combat_refactor_1_1_movement_execution_a3da779fc93dae398f5e04993f5556ef2} 
+override void System\+Miami.\+Combat\+Refactor.\+Movement\+Execution.\+On\+Enter (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+To be called ONCE, as soon as the state becomes active. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_system_miami_1_1_combat_refactor_1_1_combatant_state_ac2b41342b17b6fc8c699c42868e88551}{System\+Miami.\+Combat\+Refactor.\+Combatant\+State}}.
+
+\Hypertarget{class_system_miami_1_1_combat_refactor_1_1_movement_execution_a7b8259dbcf382ad6b7516fc5eb152e5e}\index{SystemMiami.CombatRefactor.MovementExecution@{SystemMiami.CombatRefactor.MovementExecution}!OnExit@{OnExit}}
+\index{OnExit@{OnExit}!SystemMiami.CombatRefactor.MovementExecution@{SystemMiami.CombatRefactor.MovementExecution}}
+\doxysubsubsection{\texorpdfstring{OnExit()}{OnExit()}}
+{\footnotesize\ttfamily \label{class_system_miami_1_1_combat_refactor_1_1_movement_execution_a7b8259dbcf382ad6b7516fc5eb152e5e} 
+override void System\+Miami.\+Combat\+Refactor.\+Movement\+Execution.\+On\+Exit (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Called once, inside Transition\+To(new\+State), just before the state becomes inactive. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_system_miami_1_1_combat_refactor_1_1_combatant_state_adc61486438cc6960c6e555b6131791f3}{System\+Miami.\+Combat\+Refactor.\+Combatant\+State}}.
+
+\Hypertarget{class_system_miami_1_1_combat_refactor_1_1_movement_execution_af7ca18d09ce329ad69f7cfc3f14baef7}\index{SystemMiami.CombatRefactor.MovementExecution@{SystemMiami.CombatRefactor.MovementExecution}!Update@{Update}}
+\index{Update@{Update}!SystemMiami.CombatRefactor.MovementExecution@{SystemMiami.CombatRefactor.MovementExecution}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily \label{class_system_miami_1_1_combat_refactor_1_1_movement_execution_af7ca18d09ce329ad69f7cfc3f14baef7} 
+override void System\+Miami.\+Combat\+Refactor.\+Movement\+Execution.\+Update (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+To be called EVERY FRAME while the state is active Anything that needs to be checked or adjusted That doesn\textquotesingle{}t have to do with transitioning to the next state should be implemented here. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_system_miami_1_1_combat_refactor_1_1_combatant_state_aa662627ddb3a1ed5ad5ddc240b25df43}{System\+Miami.\+Combat\+Refactor.\+Combatant\+State}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Controllers/\+Combat\+State/\+Shared States/Movement\+Execution.\+cs\end{DoxyCompactItemize}

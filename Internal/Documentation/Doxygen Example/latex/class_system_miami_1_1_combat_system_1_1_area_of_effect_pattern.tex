@@ -1,0 +1,58 @@
+\doxysection{System\+Miami.\+Combat\+System.\+Area\+Of\+Effect\+Pattern Class Reference}
+\hypertarget{class_system_miami_1_1_combat_system_1_1_area_of_effect_pattern}{}\label{class_system_miami_1_1_combat_system_1_1_area_of_effect_pattern}\index{SystemMiami.CombatSystem.AreaOfEffectPattern@{SystemMiami.CombatSystem.AreaOfEffectPattern}}
+Inheritance diagram for System\+Miami.\+Combat\+System.\+Area\+Of\+Effect\+Pattern\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_system_miami_1_1_combat_system_1_1_area_of_effect_pattern}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override \mbox{\hyperlink{class_system_miami_1_1_targets}{Targets}} \mbox{\hyperlink{class_system_miami_1_1_combat_system_1_1_area_of_effect_pattern_af537317751d8c6732f19a6760997a625}{Get\+Targets}} (Direction\+Context user\+Direction)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_system_miami_1_1_combat_system_1_1_targeting_pattern}{System\+Miami.\+Combat\+System.\+Targeting\+Pattern}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_system_miami_1_1_targets}{Targets}} {\bfseries Get\+Targets} (Direction\+Context user\+Direction)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_system_miami_1_1_combat_system_1_1_targeting_pattern}{System\+Miami.\+Combat\+System.\+Targeting\+Pattern}}}
+\begin{DoxyCompactItemize}
+\item 
+Color {\bfseries Targeted\+Tile\+Color} = Color.\+white
+\item 
+Color {\bfseries Targeted\+Combatant\+Color} = Color.\+white
+\item 
+\mbox{\hyperlink{class_system_miami_1_1_targets}{Targets}} {\bfseries Stored\+Targets}
+\item 
+bool {\bfseries \+\_\+targets\+Locked}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_system_miami_1_1_combat_system_1_1_targeting_pattern}{System\+Miami.\+Combat\+System.\+Targeting\+Pattern}}}
+\begin{DoxyCompactItemize}
+\item 
+Direction\+Context \mbox{\hyperlink{class_system_miami_1_1_combat_system_1_1_targeting_pattern_aa21e0a81fcf4c71b168da597d528fdeb}{get\+Pattern\+Direction}} (Direction\+Context user\+Direction)
+\begin{DoxyCompactList}\small\item\em Takes directional info about the user, and uses it as the basis for creating a new set of Directional\+Info about the targetting pattern specific to the Combat\+Action. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{class_system_miami_1_1_combat_system_1_1_targeting_pattern}{System\+Miami.\+Combat\+System.\+Targeting\+Pattern}}}
+\begin{DoxyCompactItemize}
+\item 
+Pattern\+Origin\+Type {\bfseries Pattern\+Origin}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_system_miami_1_1_combat_system_1_1_area_of_effect_pattern_af537317751d8c6732f19a6760997a625}\index{SystemMiami.CombatSystem.AreaOfEffectPattern@{SystemMiami.CombatSystem.AreaOfEffectPattern}!GetTargets@{GetTargets}}
+\index{GetTargets@{GetTargets}!SystemMiami.CombatSystem.AreaOfEffectPattern@{SystemMiami.CombatSystem.AreaOfEffectPattern}}
+\doxysubsubsection{\texorpdfstring{GetTargets()}{GetTargets()}}
+{\footnotesize\ttfamily \label{class_system_miami_1_1_combat_system_1_1_area_of_effect_pattern_af537317751d8c6732f19a6760997a625} 
+override \mbox{\hyperlink{class_system_miami_1_1_targets}{Targets}} System\+Miami.\+Combat\+System.\+Area\+Of\+Effect\+Pattern.\+Get\+Targets (\begin{DoxyParamCaption}\item[{Direction\+Context}]{user\+Direction}{}\end{DoxyParamCaption})}
+
+The set of adjacent positions RELATIVE TO THE PATTERN ORIGIN
+
+Check the pattern\textquotesingle{}s origin
+
+Check the position at each direction in the pattern.
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Targeting/\+Derived/Area\+Of\+Effect\+Pattern.\+cs\end{DoxyCompactItemize}

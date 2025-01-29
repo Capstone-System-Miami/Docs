@@ -1,0 +1,105 @@
+\doxysection{System\+Miami.\+Combat\+Refactor.\+Player\+Turn\+Start Class Reference}
+\hypertarget{class_system_miami_1_1_combat_refactor_1_1_player_turn_start}{}\label{class_system_miami_1_1_combat_refactor_1_1_player_turn_start}\index{SystemMiami.CombatRefactor.PlayerTurnStart@{SystemMiami.CombatRefactor.PlayerTurnStart}}
+Inheritance diagram for System\+Miami.\+Combat\+Refactor.\+Player\+Turn\+Start\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_system_miami_1_1_combat_refactor_1_1_player_turn_start}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_system_miami_1_1_combat_refactor_1_1_player_turn_start_a547c7b5db4177f026975c3507943f0c3}\label{class_system_miami_1_1_combat_refactor_1_1_player_turn_start_a547c7b5db4177f026975c3507943f0c3} 
+{\bfseries Player\+Turn\+Start} (\mbox{\hyperlink{class_system_miami_1_1_combat_system_1_1_combatant}{Combatant}} combatant)
+\item 
+override void \mbox{\hyperlink{class_system_miami_1_1_combat_refactor_1_1_player_turn_start_a6225eead8a94b7470aed2b68c5d2d867}{On\+Enter}} ()
+\begin{DoxyCompactList}\small\item\em To be called ONCE, as soon as the state becomes active. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_system_miami_1_1_combat_refactor_1_1_turn_start}{System\+Miami.\+Combat\+Refactor.\+Turn\+Start}}}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_system_miami_1_1_combat_refactor_1_1_turn_start_a85a9ef7dd3a8ebf613eebaad2c88dce5}{On\+Enter}} ()
+\begin{DoxyCompactList}\small\item\em To be called ONCE, as soon as the state becomes active. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_system_miami_1_1_combat_refactor_1_1_turn_start_adbfe55fefbeae3831404a273a7cf8f73}{Make\+Decision}} ()
+\begin{DoxyCompactList}\small\item\em To be called EVERY FRAME after \doxylink{class_system_miami_1_1_combat_refactor_1_1_combatant_state_aa662627ddb3a1ed5ad5ddc240b25df43}{Update()}. This is where decisions should be made about whether to remain in this state, or transition into a new state (and if so, which new state? etc.) \end{DoxyCompactList}\item 
+void {\bfseries Reset\+Turn} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_system_miami_1_1_combat_refactor_1_1_combatant_state}{System\+Miami.\+Combat\+Refactor.\+Combatant\+State}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_system_miami_1_1_combat_refactor_1_1_combatant_state_aa662627ddb3a1ed5ad5ddc240b25df43}{Update}} ()
+\begin{DoxyCompactList}\small\item\em To be called EVERY FRAME while the state is active Anything that needs to be checked or adjusted That doesn\textquotesingle{}t have to do with transitioning to the next state should be implemented here. \end{DoxyCompactList}\item 
+virtual void {\bfseries Late\+Update} ()
+\item 
+virtual void \mbox{\hyperlink{class_system_miami_1_1_combat_refactor_1_1_combatant_state_adc61486438cc6960c6e555b6131791f3}{On\+Exit}} ()
+\begin{DoxyCompactList}\small\item\em Called once, inside Transition\+To(new\+State), just before the state becomes inactive. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_system_miami_1_1_combat_refactor_1_1_combatant_state_ab81886bd4da9bb19059cd2c7f785e18e}{Switch\+State}} (\mbox{\hyperlink{class_system_miami_1_1_combat_refactor_1_1_combatant_state}{Combatant\+State}} new\+State)
+\begin{DoxyCompactList}\small\item\em The main method by which state transitions happen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_system_miami_1_1_combat_refactor_1_1_combatant_state_ac86e443afb73fda3990b2143198149c6}{Switch\+State}} (\mbox{\hyperlink{class_system_miami_1_1_combat_refactor_1_1_combatant_state}{Combatant\+State}} new\+State, float delay)
+\begin{DoxyCompactList}\small\item\em An overload of Switch\+State that takes a float. This function will run a Coroutine that then waits {\ttfamily float delay} seconds before assigning a new state and calling \doxylink{class_system_miami_1_1_combat_refactor_1_1_combatant_state_ac2b41342b17b6fc8c699c42868e88551}{On\+Enter()} on it. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_system_miami_1_1_combat_refactor_1_1_player_turn_start_a9356b3b14fe5b2b9cb0b6d572e1cd4d0}\label{class_system_miami_1_1_combat_refactor_1_1_player_turn_start_a9356b3b14fe5b2b9cb0b6d572e1cd4d0} 
+override bool {\bfseries Proceed\+Requested} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_system_miami_1_1_combat_refactor_1_1_turn_start}{System\+Miami.\+Combat\+Refactor.\+Turn\+Start}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Turn\+Start} (\mbox{\hyperlink{class_system_miami_1_1_combat_system_1_1_combatant}{Combatant}} combatant)
+\item 
+bool {\bfseries Proceed\+Requested} ()
+\item 
+void {\bfseries Handle\+Proceed\+Request} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_system_miami_1_1_combat_refactor_1_1_combatant_state}{System\+Miami.\+Combat\+Refactor.\+Combatant\+State}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Combatant\+State} (\mbox{\hyperlink{class_system_miami_1_1_combat_system_1_1_combatant}{Combatant}} combatant, \mbox{\hyperlink{namespace_system_miami_aab69d65d1a9e5125d88dcfaa3fe98801}{Phase}} phase)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_system_miami_1_1_combat_refactor_1_1_combatant_state}{System\+Miami.\+Combat\+Refactor.\+Combatant\+State}}}
+\begin{DoxyCompactItemize}
+\item 
+readonly \mbox{\hyperlink{namespace_system_miami_aab69d65d1a9e5125d88dcfaa3fe98801}{Phase}} {\bfseries phase}
+\item 
+readonly \mbox{\hyperlink{class_system_miami_1_1_combat_system_1_1_combatant}{Combatant}} {\bfseries combatant}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_system_miami_1_1_combat_refactor_1_1_turn_start}{System\+Miami.\+Combat\+Refactor.\+Turn\+Start}}}
+\begin{DoxyCompactItemize}
+\item 
+Conditions {\bfseries movement\+Tile\+Selection\+Conditions} = new()
+\item 
+Conditions {\bfseries action\+Selection\+Conditions} = new()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_system_miami_1_1_combat_refactor_1_1_combatant_state}{System\+Miami.\+Combat\+Refactor.\+Combatant\+State}}}
+\begin{DoxyCompactItemize}
+\item 
+readonly \mbox{\hyperlink{class_system_miami_1_1_combat_refactor_1_1_combatant_state_factory}{Combatant\+State\+Factory}} {\bfseries factory}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{class_system_miami_1_1_combat_refactor_1_1_combatant_state}{System\+Miami.\+Combat\+Refactor.\+Combatant\+State}}}
+\begin{DoxyCompactItemize}
+\item 
+string {\bfseries UI\+\_\+\+Prompts}\hspace{0.3cm}{\ttfamily  \mbox{[}get, protected set\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_system_miami_1_1_combat_refactor_1_1_player_turn_start_a6225eead8a94b7470aed2b68c5d2d867}\index{SystemMiami.CombatRefactor.PlayerTurnStart@{SystemMiami.CombatRefactor.PlayerTurnStart}!OnEnter@{OnEnter}}
+\index{OnEnter@{OnEnter}!SystemMiami.CombatRefactor.PlayerTurnStart@{SystemMiami.CombatRefactor.PlayerTurnStart}}
+\doxysubsubsection{\texorpdfstring{OnEnter()}{OnEnter()}}
+{\footnotesize\ttfamily \label{class_system_miami_1_1_combat_refactor_1_1_player_turn_start_a6225eead8a94b7470aed2b68c5d2d867} 
+override void System\+Miami.\+Combat\+Refactor.\+Player\+Turn\+Start.\+On\+Enter (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+To be called ONCE, as soon as the state becomes active. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_system_miami_1_1_combat_refactor_1_1_combatant_state_ac2b41342b17b6fc8c699c42868e88551}{System\+Miami.\+Combat\+Refactor.\+Combatant\+State}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Controllers/\+Combat\+State/\+Player States/Player\+Turn\+Start.\+cs\end{DoxyCompactItemize}

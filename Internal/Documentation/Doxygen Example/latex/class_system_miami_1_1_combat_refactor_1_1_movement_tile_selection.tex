@@ -1,0 +1,151 @@
+\doxysection{System\+Miami.\+Combat\+Refactor.\+Movement\+Tile\+Selection Class Reference}
+\hypertarget{class_system_miami_1_1_combat_refactor_1_1_movement_tile_selection}{}\label{class_system_miami_1_1_combat_refactor_1_1_movement_tile_selection}\index{SystemMiami.CombatRefactor.MovementTileSelection@{SystemMiami.CombatRefactor.MovementTileSelection}}
+Inheritance diagram for System\+Miami.\+Combat\+Refactor.\+Movement\+Tile\+Selection\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.339833cm]{class_system_miami_1_1_combat_refactor_1_1_movement_tile_selection}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_system_miami_1_1_combat_refactor_1_1_movement_tile_selection_acc3bf8033c7468cadd931e8f407d7649}{On\+Enter}} ()
+\begin{DoxyCompactList}\small\item\em To be called ONCE, as soon as the state becomes active. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_system_miami_1_1_combat_refactor_1_1_movement_tile_selection_a987154f90e5576a9b6c14a21054046f4}{Update}} ()
+\begin{DoxyCompactList}\small\item\em To be called EVERY FRAME while the state is active Anything that needs to be checked or adjusted That doesn\textquotesingle{}t have to do with transitioning to the next state should be implemented here. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_system_miami_1_1_combat_refactor_1_1_movement_tile_selection_ac6a2f9b6457f9a74f610a19d2555bee2}{Make\+Decision}} ()
+\begin{DoxyCompactList}\small\item\em To be called EVERY FRAME after \doxylink{class_system_miami_1_1_combat_refactor_1_1_movement_tile_selection_a987154f90e5576a9b6c14a21054046f4}{Update()}. This is where decisions should be made about whether to remain in this state, or transition into a new state (and if so, which new state? etc.) \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_system_miami_1_1_combat_refactor_1_1_movement_tile_selection_aabe56e29109c6c0ed3968a62488dcf5f}{On\+Exit}} ()
+\begin{DoxyCompactList}\small\item\em Called once, inside Transition\+To(new\+State), just before the state becomes inactive. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_system_miami_1_1_combat_refactor_1_1_combatant_state}{System\+Miami.\+Combat\+Refactor.\+Combatant\+State}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void {\bfseries Late\+Update} ()
+\item 
+void \mbox{\hyperlink{class_system_miami_1_1_combat_refactor_1_1_combatant_state_ab81886bd4da9bb19059cd2c7f785e18e}{Switch\+State}} (\mbox{\hyperlink{class_system_miami_1_1_combat_refactor_1_1_combatant_state}{Combatant\+State}} new\+State)
+\begin{DoxyCompactList}\small\item\em The main method by which state transitions happen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_system_miami_1_1_combat_refactor_1_1_combatant_state_ac86e443afb73fda3990b2143198149c6}{Switch\+State}} (\mbox{\hyperlink{class_system_miami_1_1_combat_refactor_1_1_combatant_state}{Combatant\+State}} new\+State, float delay)
+\begin{DoxyCompactList}\small\item\em An overload of Switch\+State that takes a float. This function will run a Coroutine that then waits {\ttfamily float delay} seconds before assigning a new state and calling \doxylink{class_system_miami_1_1_combat_refactor_1_1_combatant_state_ac2b41342b17b6fc8c699c42868e88551}{On\+Enter()} on it. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_system_miami_1_1_combat_refactor_1_1_movement_tile_selection_ad6582fdbc6b1a0db9f5dd163e8660086}\label{class_system_miami_1_1_combat_refactor_1_1_movement_tile_selection_ad6582fdbc6b1a0db9f5dd163e8660086} 
+{\bfseries Movement\+Tile\+Selection} (\mbox{\hyperlink{class_system_miami_1_1_combat_system_1_1_combatant}{Combatant}} combatant)
+\item 
+\Hypertarget{class_system_miami_1_1_combat_refactor_1_1_movement_tile_selection_ad65381bc4abc54fc6a8e2c20720e6f7c}\label{class_system_miami_1_1_combat_refactor_1_1_movement_tile_selection_ad65381bc4abc54fc6a8e2c20720e6f7c} 
+bool {\bfseries Turn\+End\+Requested} ()
+\item 
+\Hypertarget{class_system_miami_1_1_combat_refactor_1_1_movement_tile_selection_a99b142231523080b76574e1f2a632fc8}\label{class_system_miami_1_1_combat_refactor_1_1_movement_tile_selection_a99b142231523080b76574e1f2a632fc8} 
+bool {\bfseries Skip\+Movement\+Requested} ()
+\item 
+\Hypertarget{class_system_miami_1_1_combat_refactor_1_1_movement_tile_selection_ae8e9fd9ae15ef9461645dcd2c6d5583d}\label{class_system_miami_1_1_combat_refactor_1_1_movement_tile_selection_ae8e9fd9ae15ef9461645dcd2c6d5583d} 
+bool {\bfseries Confirm\+Path\+Requested} ()
+\item 
+\Hypertarget{class_system_miami_1_1_combat_refactor_1_1_movement_tile_selection_aa706e4055a783e63ab345bbb6f43dd3e}\label{class_system_miami_1_1_combat_refactor_1_1_movement_tile_selection_aa706e4055a783e63ab345bbb6f43dd3e} 
+bool {\bfseries Try\+Get\+New\+Focus} (out Overlay\+Tile new\+Focus)
+\item 
+\Hypertarget{class_system_miami_1_1_combat_refactor_1_1_movement_tile_selection_a60eac1076ef93b213a316eb880fbe96b}\label{class_system_miami_1_1_combat_refactor_1_1_movement_tile_selection_a60eac1076ef93b213a316eb880fbe96b} 
+Direction\+Context {\bfseries Get\+New\+Direction} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_system_miami_1_1_combat_refactor_1_1_combatant_state}{System\+Miami.\+Combat\+Refactor.\+Combatant\+State}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Combatant\+State} (\mbox{\hyperlink{class_system_miami_1_1_combat_system_1_1_combatant}{Combatant}} combatant, \mbox{\hyperlink{namespace_system_miami_aab69d65d1a9e5125d88dcfaa3fe98801}{Phase}} phase)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_system_miami_1_1_combat_refactor_1_1_movement_tile_selection_a75785b3574a814514ddf50d584401450}\label{class_system_miami_1_1_combat_refactor_1_1_movement_tile_selection_a75785b3574a814514ddf50d584401450} 
+Movement\+Path {\bfseries path}
+\item 
+\Hypertarget{class_system_miami_1_1_combat_refactor_1_1_movement_tile_selection_a5ed78cf625f0d749bd94d8410b2ba8df}\label{class_system_miami_1_1_combat_refactor_1_1_movement_tile_selection_a5ed78cf625f0d749bd94d8410b2ba8df} 
+Conditions {\bfseries turn\+End\+Conditions} = new()
+\item 
+\Hypertarget{class_system_miami_1_1_combat_refactor_1_1_movement_tile_selection_a9888967cd6dbc98de5fff87a4179b98b}\label{class_system_miami_1_1_combat_refactor_1_1_movement_tile_selection_a9888967cd6dbc98de5fff87a4179b98b} 
+Conditions {\bfseries skip\+Movement\+Conditions} = new()
+\item 
+\Hypertarget{class_system_miami_1_1_combat_refactor_1_1_movement_tile_selection_a9fb6f6979767c8d54b45fa386f1236ae}\label{class_system_miami_1_1_combat_refactor_1_1_movement_tile_selection_a9fb6f6979767c8d54b45fa386f1236ae} 
+Conditions {\bfseries confirm\+Path\+Conditions} = new()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_system_miami_1_1_combat_refactor_1_1_combatant_state}{System\+Miami.\+Combat\+Refactor.\+Combatant\+State}}}
+\begin{DoxyCompactItemize}
+\item 
+readonly \mbox{\hyperlink{class_system_miami_1_1_combat_refactor_1_1_combatant_state_factory}{Combatant\+State\+Factory}} {\bfseries factory}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_system_miami_1_1_combat_refactor_1_1_combatant_state}{System\+Miami.\+Combat\+Refactor.\+Combatant\+State}}}
+\begin{DoxyCompactItemize}
+\item 
+readonly \mbox{\hyperlink{namespace_system_miami_aab69d65d1a9e5125d88dcfaa3fe98801}{Phase}} {\bfseries phase}
+\item 
+readonly \mbox{\hyperlink{class_system_miami_1_1_combat_system_1_1_combatant}{Combatant}} {\bfseries combatant}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{class_system_miami_1_1_combat_refactor_1_1_combatant_state}{System\+Miami.\+Combat\+Refactor.\+Combatant\+State}}}
+\begin{DoxyCompactItemize}
+\item 
+string {\bfseries UI\+\_\+\+Prompts}\hspace{0.3cm}{\ttfamily  \mbox{[}get, protected set\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_system_miami_1_1_combat_refactor_1_1_movement_tile_selection_ac6a2f9b6457f9a74f610a19d2555bee2}\index{SystemMiami.CombatRefactor.MovementTileSelection@{SystemMiami.CombatRefactor.MovementTileSelection}!MakeDecision@{MakeDecision}}
+\index{MakeDecision@{MakeDecision}!SystemMiami.CombatRefactor.MovementTileSelection@{SystemMiami.CombatRefactor.MovementTileSelection}}
+\doxysubsubsection{\texorpdfstring{MakeDecision()}{MakeDecision()}}
+{\footnotesize\ttfamily \label{class_system_miami_1_1_combat_refactor_1_1_movement_tile_selection_ac6a2f9b6457f9a74f610a19d2555bee2} 
+override void System\+Miami.\+Combat\+Refactor.\+Movement\+Tile\+Selection.\+Make\+Decision (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+To be called EVERY FRAME after \doxylink{class_system_miami_1_1_combat_refactor_1_1_movement_tile_selection_a987154f90e5576a9b6c14a21054046f4}{Update()}. This is where decisions should be made about whether to remain in this state, or transition into a new state (and if so, which new state? etc.) 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_system_miami_1_1_combat_refactor_1_1_combatant_state_a83fa6dedff861eb627a8af25a242c7ea}{System\+Miami.\+Combat\+Refactor.\+Combatant\+State}}.
+
+\Hypertarget{class_system_miami_1_1_combat_refactor_1_1_movement_tile_selection_acc3bf8033c7468cadd931e8f407d7649}\index{SystemMiami.CombatRefactor.MovementTileSelection@{SystemMiami.CombatRefactor.MovementTileSelection}!OnEnter@{OnEnter}}
+\index{OnEnter@{OnEnter}!SystemMiami.CombatRefactor.MovementTileSelection@{SystemMiami.CombatRefactor.MovementTileSelection}}
+\doxysubsubsection{\texorpdfstring{OnEnter()}{OnEnter()}}
+{\footnotesize\ttfamily \label{class_system_miami_1_1_combat_refactor_1_1_movement_tile_selection_acc3bf8033c7468cadd931e8f407d7649} 
+override void System\+Miami.\+Combat\+Refactor.\+Movement\+Tile\+Selection.\+On\+Enter (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+To be called ONCE, as soon as the state becomes active. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_system_miami_1_1_combat_refactor_1_1_combatant_state_ac2b41342b17b6fc8c699c42868e88551}{System\+Miami.\+Combat\+Refactor.\+Combatant\+State}}.
+
+\Hypertarget{class_system_miami_1_1_combat_refactor_1_1_movement_tile_selection_aabe56e29109c6c0ed3968a62488dcf5f}\index{SystemMiami.CombatRefactor.MovementTileSelection@{SystemMiami.CombatRefactor.MovementTileSelection}!OnExit@{OnExit}}
+\index{OnExit@{OnExit}!SystemMiami.CombatRefactor.MovementTileSelection@{SystemMiami.CombatRefactor.MovementTileSelection}}
+\doxysubsubsection{\texorpdfstring{OnExit()}{OnExit()}}
+{\footnotesize\ttfamily \label{class_system_miami_1_1_combat_refactor_1_1_movement_tile_selection_aabe56e29109c6c0ed3968a62488dcf5f} 
+override void System\+Miami.\+Combat\+Refactor.\+Movement\+Tile\+Selection.\+On\+Exit (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Called once, inside Transition\+To(new\+State), just before the state becomes inactive. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_system_miami_1_1_combat_refactor_1_1_combatant_state_adc61486438cc6960c6e555b6131791f3}{System\+Miami.\+Combat\+Refactor.\+Combatant\+State}}.
+
+\Hypertarget{class_system_miami_1_1_combat_refactor_1_1_movement_tile_selection_a987154f90e5576a9b6c14a21054046f4}\index{SystemMiami.CombatRefactor.MovementTileSelection@{SystemMiami.CombatRefactor.MovementTileSelection}!Update@{Update}}
+\index{Update@{Update}!SystemMiami.CombatRefactor.MovementTileSelection@{SystemMiami.CombatRefactor.MovementTileSelection}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily \label{class_system_miami_1_1_combat_refactor_1_1_movement_tile_selection_a987154f90e5576a9b6c14a21054046f4} 
+override void System\+Miami.\+Combat\+Refactor.\+Movement\+Tile\+Selection.\+Update (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+To be called EVERY FRAME while the state is active Anything that needs to be checked or adjusted That doesn\textquotesingle{}t have to do with transitioning to the next state should be implemented here. 
+
+
+
+Reimplemented from \mbox{\hyperlink{class_system_miami_1_1_combat_refactor_1_1_combatant_state_aa662627ddb3a1ed5ad5ddc240b25df43}{System\+Miami.\+Combat\+Refactor.\+Combatant\+State}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Controllers/\+Combat\+State/\+Abstract States/Movement\+Tile\+Selection.\+cs\end{DoxyCompactItemize}

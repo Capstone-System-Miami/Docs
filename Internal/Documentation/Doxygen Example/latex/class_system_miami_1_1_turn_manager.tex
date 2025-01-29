@@ -1,0 +1,60 @@
+\doxysection{System\+Miami.\+Turn\+Manager Class Reference}
+\hypertarget{class_system_miami_1_1_turn_manager}{}\label{class_system_miami_1_1_turn_manager}\index{SystemMiami.TurnManager@{SystemMiami.TurnManager}}
+
+
+Manages turns and phases in the combat system. Handles switching between player and enemy turns, as well as movement and action phases. Spawns enemies.  
+
+
+Inheritance diagram for System\+Miami.\+Turn\+Manager\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_system_miami_1_1_turn_manager}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_system_miami_1_1_turn_manager_a0dc87ccca0c2101b3c855340b39fe87d}\label{class_system_miami_1_1_turn_manager_a0dc87ccca0c2101b3c855340b39fe87d} 
+\mbox{\hyperlink{class_system_miami_1_1_combat_system_1_1_combatant}{Combatant}} {\bfseries player\+Character}
+\item 
+\Hypertarget{class_system_miami_1_1_turn_manager_a2beef622f17b71479c251ad04426a77c}\label{class_system_miami_1_1_turn_manager_a2beef622f17b71479c251ad04426a77c} 
+List$<$ \mbox{\hyperlink{class_system_miami_1_1_combat_system_1_1_combatant}{Combatant}} $>$ {\bfseries enemy\+Characters} = new List$<$\mbox{\hyperlink{class_system_miami_1_1_combat_system_1_1_combatant}{Combatant}}$>$()
+\item 
+\Hypertarget{class_system_miami_1_1_turn_manager_a0981f361080a6370978c12de7eb9e4a0}\label{class_system_miami_1_1_turn_manager_a0981f361080a6370978c12de7eb9e4a0} 
+List$<$ \mbox{\hyperlink{class_system_miami_1_1_combat_system_1_1_combatant}{Combatant}} $>$ {\bfseries combatants} = new List$<$\mbox{\hyperlink{class_system_miami_1_1_combat_system_1_1_combatant}{Combatant}}$>$()
+\item 
+\Hypertarget{class_system_miami_1_1_turn_manager_ade3de601bda8b3cd8ddc9b382e567408}\label{class_system_miami_1_1_turn_manager_ade3de601bda8b3cd8ddc9b382e567408} 
+Game\+Object {\bfseries enemy\+Prefab}
+\item 
+\Hypertarget{class_system_miami_1_1_turn_manager_a65e0f0e8da3b489bcb2961a2e2501374}\label{class_system_miami_1_1_turn_manager_a65e0f0e8da3b489bcb2961a2e2501374} 
+Game\+Object {\bfseries boss\+Prefab}
+\item 
+\Hypertarget{class_system_miami_1_1_turn_manager_ad2f7b64756ddf8f57653b789ab7f2370}\label{class_system_miami_1_1_turn_manager_ad2f7b64756ddf8f57653b789ab7f2370} 
+List$<$ Game\+Object $>$ {\bfseries enemy\+Prefabs} = new()
+\item 
+\Hypertarget{class_system_miami_1_1_turn_manager_a77f8570b09b3e66f80c13f2440888be3}\label{class_system_miami_1_1_turn_manager_a77f8570b09b3e66f80c13f2440888be3} 
+int {\bfseries number\+Of\+Enemies} = 3
+\item 
+\Hypertarget{class_system_miami_1_1_turn_manager_ae6d57052139f844b949dc667c2532629}\label{class_system_miami_1_1_turn_manager_ae6d57052139f844b949dc667c2532629} 
+Action$<$ \mbox{\hyperlink{namespace_system_miami_aab69d65d1a9e5125d88dcfaa3fe98801}{Phase}} $>$ {\bfseries New\+Turn\+Phase}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_system_miami_1_1_turn_manager_acd560870f69a78f09a9f7e7da9e4a4ca}\label{class_system_miami_1_1_turn_manager_acd560870f69a78f09a9f7e7da9e4a4ca} 
+bool {\bfseries Is\+Player\+Turn}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\Hypertarget{class_system_miami_1_1_turn_manager_ad33c81180583569331f7da87d26682eb}\label{class_system_miami_1_1_turn_manager_ad33c81180583569331f7da87d26682eb} 
+\mbox{\hyperlink{class_system_miami_1_1_combat_system_1_1_combatant}{Combatant}} {\bfseries Current\+Turn\+Owner}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\Hypertarget{class_system_miami_1_1_turn_manager_ac553d3b2255909e9b3ead6f8139c34ca}\label{class_system_miami_1_1_turn_manager_ac553d3b2255909e9b3ead6f8139c34ca} 
+bool {\bfseries Is\+Game\+Over}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Manages turns and phases in the combat system. Handles switching between player and enemy turns, as well as movement and action phases. Spawns enemies. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Turn\+Manager.\+cs\end{DoxyCompactItemize}

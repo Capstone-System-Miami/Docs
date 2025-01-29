@@ -1,0 +1,146 @@
+\doxysection{System\+Miami.\+Combat\+System.\+Enemy\+Combatant Class Reference}
+\hypertarget{class_system_miami_1_1_combat_system_1_1_enemy_combatant}{}\label{class_system_miami_1_1_combat_system_1_1_enemy_combatant}\index{SystemMiami.CombatSystem.EnemyCombatant@{SystemMiami.CombatSystem.EnemyCombatant}}
+Inheritance diagram for System\+Miami.\+Combat\+System.\+Enemy\+Combatant\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.000000cm]{class_system_miami_1_1_combat_system_1_1_enemy_combatant}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_system_miami_1_1_combat_system_1_1_enemy_combatant_a7ae24576abcf8f9e1ca1944263d9ac64}\label{class_system_miami_1_1_combat_system_1_1_enemy_combatant_a7ae24576abcf8f9e1ca1944263d9ac64} 
+override Overlay\+Tile {\bfseries Get\+New\+Focus} ()
+\item 
+\Hypertarget{class_system_miami_1_1_combat_system_1_1_enemy_combatant_a0ed9ff03d6d09fa911ec37e0e4b92ef1}\label{class_system_miami_1_1_combat_system_1_1_enemy_combatant_a0ed9ff03d6d09fa911ec37e0e4b92ef1} 
+bool {\bfseries Is\+In\+Detection\+Range} (\mbox{\hyperlink{class_system_miami_1_1_combat_system_1_1_combatant}{Combatant}} target)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_system_miami_1_1_combat_system_1_1_combatant}{System\+Miami.\+Combat\+System.\+Combatant}}}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries Step\+Towards} (Overlay\+Tile target)
+\item 
+bool {\bfseries In\+Placement\+Range\+Of} (Overlay\+Tile target\+Tile)
+\item 
+void \mbox{\hyperlink{class_system_miami_1_1_combat_system_1_1_combatant_a3386390a739bad7d47ed6742fcbf42cc}{Add\+To}} (Overlay\+Tile tile)
+\item 
+void \mbox{\hyperlink{class_system_miami_1_1_combat_system_1_1_combatant_a171c060145950b16d8015a834a42579d}{Remove\+From}} (Overlay\+Tile tile)
+\item 
+Overlay\+Tile {\bfseries Get\+New\+Focus} ()
+\begin{DoxyCompactList}\small\item\em Whatever tile the combatant is currently focusing on. The methods for determining this must be defined in derived classes. \end{DoxyCompactList}\item 
+Overlay\+Tile {\bfseries Get\+Default\+Focus} ()
+\item 
+void {\bfseries Update\+Anim\+Direction} (Screen\+Dir screen\+Direction)
+\item 
+void \mbox{\hyperlink{class_system_miami_1_1_combat_system_1_1_combatant_af3f770483fcc294840d50ff9ace714a0}{Notify\+Targeting\+Patterns}} (Direction\+Context direction\+Context)
+\begin{DoxyCompactList}\small\item\em TODO\+: These are being subscribed to by \doxylink{class_system_miami_1_1_ability_system_1_1_ability}{Ability}\textquotesingle{}s Targeting\+Patterns. \end{DoxyCompactList}\item 
+void {\bfseries Highlight} ()
+\item 
+void {\bfseries Highlight} (Color color)
+\item 
+void {\bfseries Un\+Highlight} ()
+\item 
+Game\+Object {\bfseries Game\+Object} ()
+\item 
+bool \mbox{\hyperlink{class_system_miami_1_1_combat_system_1_1_combatant_aeb35939216660c787bc60797225e6867}{Is\+Currently\+Damageable}} ()
+\item 
+void \mbox{\hyperlink{class_system_miami_1_1_combat_system_1_1_combatant_a25a7648f9c591810a937c938dcd761de}{Damage}} (float amount)
+\item 
+bool \mbox{\hyperlink{class_system_miami_1_1_combat_system_1_1_combatant_aa166d0dd8e133f6473e4415d95ad2dd4}{Is\+Currently\+Healable}} ()
+\item 
+void \mbox{\hyperlink{class_system_miami_1_1_combat_system_1_1_combatant_abaca58c252cbd12e6e6c420ae6b8a8c9}{Heal}} ()
+\item 
+void \mbox{\hyperlink{class_system_miami_1_1_combat_system_1_1_combatant_a6fa9bbacc95e5bfa8908f20f5618e9ac}{Heal}} (float amount)
+\item 
+void \mbox{\hyperlink{class_system_miami_1_1_combat_system_1_1_combatant_adb92be24acdcbab26f2de951f8780982}{Heal\+Percent}} (float percent)
+\item 
+void {\bfseries Restore\+Resource} (Resource type, float amount)
+\item 
+bool \mbox{\hyperlink{class_system_miami_1_1_combat_system_1_1_combatant_a45cb811d2b9ccd83008ac64bb1fb8c61}{Is\+Currently\+Movable}} ()
+\item 
+Vector2\+Int \mbox{\hyperlink{class_system_miami_1_1_combat_system_1_1_combatant_a6bb0ca3b68a486f963ae9d11c2033d7e}{Get\+Tile\+Pos}} ()
+\item 
+bool \mbox{\hyperlink{class_system_miami_1_1_combat_system_1_1_combatant_a75f1e64b326765708ae2783bf259b1de}{Try\+Move\+To}} (Vector2\+Int tile\+Pos)
+\item 
+bool \mbox{\hyperlink{class_system_miami_1_1_combat_system_1_1_combatant_a343ae10f64fa701a44bd9a1f346f5e5a}{Try\+Move\+In\+Direction}} (Vector2\+Int board\+Direction, int distance)
+\item 
+void {\bfseries Inflict\+Status\+Effect} (Status\+Effect effect)
+\item 
+void {\bfseries Reset\+Turn} ()
+\item 
+void {\bfseries Select\+Physical\+Ability} (\mbox{\hyperlink{class_system_miami_1_1_combat_refactor_1_1_action_quickslot}{Action\+Quickslot}} slot)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_system_miami_1_1_combat_system_1_1_combatant}{System\+Miami.\+Combat\+System.\+Combatant}}}
+\begin{DoxyCompactItemize}
+\item 
+Action$<$ Direction\+Context $>$ {\bfseries On\+Subject\+Changed}
+\item 
+Action$<$ Direction\+Context $>$ {\bfseries On\+Direction\+Changed}
+\item 
+bool {\bfseries Is\+Damageable} = true
+\item 
+bool {\bfseries Is\+Healable} = true
+\item 
+bool {\bfseries Is\+Movable} = true
+\item 
+bool {\bfseries Is\+Stunned} = false
+\item 
+bool {\bfseries Is\+Invisible} = false
+\item 
+Resource {\bfseries Health}
+\item 
+Resource {\bfseries Stamina}
+\item 
+Resource {\bfseries Mana}
+\item 
+Resource {\bfseries Speed}
+\item 
+\mbox{\hyperlink{class_system_miami_1_1_combat_refactor_1_1_loadout}{Loadout}} {\bfseries loadout}
+\item 
+Direction\+Context {\bfseries Current\+Direction\+Context}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_system_miami_1_1_combat_system_1_1_combatant}{System\+Miami.\+Combat\+System.\+Combatant}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void {\bfseries Start} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Attributes inherited from \mbox{\hyperlink{class_system_miami_1_1_combat_system_1_1_combatant}{System\+Miami.\+Combat\+System.\+Combatant}}}
+\begin{DoxyCompactItemize}
+\item 
+const float {\bfseries PLACEMENT\+\_\+\+RANGE} = 0.\+0001f
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{class_system_miami_1_1_combat_system_1_1_combatant}{System\+Miami.\+Combat\+System.\+Combatant}}}
+\begin{DoxyCompactItemize}
+\item 
+int {\bfseries ID}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+Color {\bfseries Color\+Tag}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+bool {\bfseries Print\+UIto\+Console}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+bool {\bfseries Is\+My\+Turn}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+bool {\bfseries Ready\+To\+Start}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\hyperlink{namespace_system_miami_aab69d65d1a9e5125d88dcfaa3fe98801}{Phase}} {\bfseries Current\+Phase}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\hyperlink{class_system_miami_1_1_combat_refactor_1_1_combatant_state_factory}{Combatant\+State\+Factory}} {\bfseries Factory}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\hyperlink{class_system_miami_1_1_combat_refactor_1_1_combatant_state}{Combatant\+State}} {\bfseries Current\+State}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+Stats {\bfseries Stats}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\hyperlink{class_system_miami_1_1_ability_system_1_1_abilities}{Abilities}} {\bfseries Abilities}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\hyperlink{class_system_miami_1_1_combat_refactor_1_1_combat_action}{Combat\+Action}} {\bfseries selected\+Ability}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+Animator {\bfseries Animator}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+Overlay\+Tile {\bfseries Current\+Tile}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Combatant/Enemy\+Combatant.\+cs\end{DoxyCompactItemize}

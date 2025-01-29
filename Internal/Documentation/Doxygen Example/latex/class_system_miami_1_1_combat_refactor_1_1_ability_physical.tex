@@ -1,0 +1,73 @@
+\doxysection{System\+Miami.\+Combat\+Refactor.\+Ability\+Physical Class Reference}
+\hypertarget{class_system_miami_1_1_combat_refactor_1_1_ability_physical}{}\label{class_system_miami_1_1_combat_refactor_1_1_ability_physical}\index{SystemMiami.CombatRefactor.AbilityPhysical@{SystemMiami.CombatRefactor.AbilityPhysical}}
+Inheritance diagram for System\+Miami.\+Combat\+Refactor.\+Ability\+Physical\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_system_miami_1_1_combat_refactor_1_1_ability_physical}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_system_miami_1_1_combat_refactor_1_1_ability_physical_a9e439623e0a7c81704b9aefbd181128a}\label{class_system_miami_1_1_combat_refactor_1_1_ability_physical_a9e439623e0a7c81704b9aefbd181128a} 
+{\bfseries Ability\+Physical} (\mbox{\hyperlink{class_system_miami_1_1_combat_refactor_1_1_new_ability_s_o}{New\+Ability\+SO}} preset, \mbox{\hyperlink{class_system_miami_1_1_combat_system_1_1_combatant}{Combatant}} user)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_system_miami_1_1_combat_refactor_1_1_new_ability}{System\+Miami.\+Combat\+Refactor.\+New\+Ability}}}
+\begin{DoxyCompactItemize}
+\item 
+override IEnumerator {\bfseries Execute} ()
+\item 
+void {\bfseries Reduce\+Cooldown} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_system_miami_1_1_combat_refactor_1_1_combat_action}{System\+Miami.\+Combat\+Refactor.\+Combat\+Action}}}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries Update\+Direction} (Direction\+Context new\+Direction, bool direction\+Changed)
+\item 
+void {\bfseries Unequip} ()
+\item 
+bool {\bfseries Player\+Found\+In\+Targets} ()
+\begin{DoxyCompactList}\small\item\em TODO\+: Implement this method. \end{DoxyCompactList}\item 
+IEnumerator {\bfseries Execute} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_system_miami_1_1_combat_refactor_1_1_new_ability}{System\+Miami.\+Combat\+Refactor.\+New\+Ability}}}
+\begin{DoxyCompactItemize}
+\item 
+readonly float {\bfseries Resource\+Cost}
+\item 
+readonly int {\bfseries Cooldown\+Turns}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_system_miami_1_1_combat_refactor_1_1_combat_action}{System\+Miami.\+Combat\+Refactor.\+Combat\+Action}}}
+\begin{DoxyCompactItemize}
+\item 
+readonly Sprite {\bfseries Icon}
+\item 
+readonly List$<$ \mbox{\hyperlink{class_system_miami_1_1_combat_system_1_1_combat_subaction}{Combat\+Subaction}} $>$ {\bfseries Sub\+Actions}
+\item 
+readonly Animator\+Override\+Controller {\bfseries Override\+Controller}
+\item 
+readonly \mbox{\hyperlink{class_system_miami_1_1_combat_system_1_1_combatant}{Combatant}} {\bfseries User}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_system_miami_1_1_combat_refactor_1_1_new_ability}{System\+Miami.\+Combat\+Refactor.\+New\+Ability}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries New\+Ability} (\mbox{\hyperlink{class_system_miami_1_1_combat_refactor_1_1_new_ability_s_o}{New\+Ability\+SO}} preset, \mbox{\hyperlink{class_system_miami_1_1_combat_system_1_1_combatant}{Combatant}} user, Resource target\+Resource)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_system_miami_1_1_combat_refactor_1_1_combat_action}{System\+Miami.\+Combat\+Refactor.\+Combat\+Action}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Combat\+Action} (Sprite icon, List$<$ \mbox{\hyperlink{class_system_miami_1_1_combat_system_1_1_combat_subaction}{Combat\+Subaction}} $>$ sub\+Actions, Animator\+Override\+Controller override\+Controller, \mbox{\hyperlink{class_system_miami_1_1_combat_system_1_1_combatant}{Combatant}} user)
+\item 
+void {\bfseries perform\+Actions} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{class_system_miami_1_1_combat_refactor_1_1_new_ability}{System\+Miami.\+Combat\+Refactor.\+New\+Ability}}}
+\begin{DoxyCompactItemize}
+\item 
+bool {\bfseries Is\+On\+Cooldown}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Combat Action/\+Ability/\+Classes/Ability\+Physical.\+cs\end{DoxyCompactItemize}
